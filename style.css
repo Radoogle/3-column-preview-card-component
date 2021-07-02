@@ -1,120 +1,147 @@
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --clr-primary-300: hsl(31, 77%, 52%);
-    --clr-primary-500: hsl(184, 100%, 22%);
-    --clr-primary-700: hsl(179, 100%, 13%);
+  --clr-primary-300: hsl(31, 77%, 52%);
+  --clr-primary-500: hsl(184, 100%, 22%);
+  --clr-primary-700: hsl(179, 100%, 13%);
 
-    --clr-neutral-300: hsla(0, 0%, 100%, 0.75);
-    --clr-neutral-400: hsl(0, 0%, 95%);
+  --clr-neutral-300: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-400: hsl(0, 0%, 95%);
 
-    --ff-primary: 'Lexend Deca', sans-serif;
-    --ff-secondary: 'Big Shoulders Display', cursive;
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", cursive;
 
-    --fs-primary: 0.9375rem;
+  --fs-primary: 0.9375rem;
 }
 
 body {
-    font-family: var(--ff-primary);
-    font-size: var(--fs-primary);
-    background-color: var(--clr-neutral-400);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  background-color: var(--clr-neutral-400);
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-    margin: 4rem auto;
-    border-radius: 7.5px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 4rem auto;
+  border-radius: 7.5px;
+  overflow: hidden;
 }
 
 img {
-    width: 20%;
+  width: 20%;
 }
 
 h1 {
-    text-transform: uppercase;
-    font-family: var(--ff-secondary);
-    margin: .75em 0;
-    color: var(--clr-neutral-400);
-    font-size: 2.4em;
-    font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+  margin: 0.75em 0;
+  color: var(--clr-neutral-400);
+  font-size: 2.4em;
+  font-weight: 700;
 }
 
 p {
-    color: var(--clr-neutral-300);
-    font-size: .8em;
-    line-height: 2;
-    /* letter-spacing: 1.2px; */
+  color: var(--clr-neutral-300);
+  font-size: 0.8em;
+  line-height: 2;
+  /* letter-spacing: 1.2px; */
 }
 
 .card {
-    padding: 3em;
+  padding: 3em;
 }
 
 .card:nth-child(1) {
-    background-color: var(--clr-primary-300);
+  background-color: var(--clr-primary-300);
 }
 
 .card:nth-child(2) {
-    background-color: var(--clr-primary-500);
+  background-color: var(--clr-primary-500);
 }
 
 .card:nth-child(3) {
-    background-color: var(--clr-primary-700);
+  background-color: var(--clr-primary-700);
 }
 
 .button {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--clr-neutral-400);
-    margin-top: 2em;
-    padding: 1em 2em;
-    border-radius: 9999px;
-    font-size: .85em;
-    font-weight: bold;
-    border: 1px solid var(--clr-neutral-400);
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--clr-neutral-400);
+  margin-top: 2em;
+  padding: 1em 2em;
+  border-radius: 9999px;
+  font-size: 0.85em;
+  font-weight: bold;
+  border: 1px solid var(--clr-neutral-400);
 }
 
 .card:nth-of-type(1) .button {
-    color: var(--clr-primary-300);
+  color: var(--clr-primary-300);
 }
 
 .card:nth-of-type(2) .button {
-    color: var(--clr-primary-500);
+  color: var(--clr-primary-500);
 }
 
 .card:nth-of-type(3) .button {
-    color: var(--clr-primary-700);
+  color: var(--clr-primary-700);
 }
 
 .card .button:hover,
 .card .button:active,
 .card .button:focus {
-    background-color: transparent;
-    border: 1px solid var(--clr-neutral-400);
-    color: var(--clr-neutral-400);
+  background-color: transparent;
+  border: 1px solid var(--clr-neutral-400);
+  color: var(--clr-neutral-400);
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-primary-700);
+}
+
+.attribution a {
+  color: var(--clr-primary-300);
+  text-decoration: none;
+}
+
+footer {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 575px) {
+  .container {
+    flex-direction: row;
+    max-width: 70%;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
+  main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
   }
 
-  @media (min-width: 575px) {
-      .container {
-          flex-direction: row;
-      }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+}
